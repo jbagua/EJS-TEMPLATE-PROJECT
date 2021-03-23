@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment(9)</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        h1{
+            font-family: Bell MT;
+            font-size: 30px;
+        }
+        p{
+            font-family: Bell MT;
+            font-size: 20px;
+        }
+        .data{
+            border: 2px solid black;
+            font-family: Bell MT;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>WELCOME TO MY DATABASE</h1>
+    <p><u>This information shows data of different users </u></p>
+    <section>
+        <div class = "data">
+        <% for (let user of users){%>
+        <div>
+            <%if (user.name===undefined){%>
+                NAME: "name missing"
+                <%} else  { %>
+                NAME: <%=user.name%>
+                <% }%>
+           
+            <%if (user.age===undefined){%>
+                AGE:"age missing"
+                <%} else  { %>
+                AGE: <%=user.age%>
+                <% }%>
+
+            <%if (user.hobbies===undefined){%>
+                HOBBIES: "hobbies missing"
+                <%} else { %>
+                HOBBIES: <%=user.hobbies%>
+                <% }%>
+
+            <%if (user.name===undefined && user.age===undefined && user.hobbies===undefined){%>
+                 ==> BAD DATA
+                <% } %> 
+
+        </div>
+        <% } %>
+    </div>
+    </section>
+   
+    
+</body>
+</html>
